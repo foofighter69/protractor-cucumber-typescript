@@ -9,7 +9,7 @@ export const config: Config = {
 
     SELENIUM_PROMISE_MANAGER: false,
 
-    baseUrl: "https://www.google.com",
+    baseUrl: "https://www.google.com/webhp?hl=en",
 
     capabilities: {
         browserName: "chrome",
@@ -39,4 +39,6 @@ export const config: Config = {
     onComplete: () => {
         Reporter.createHTMLReport();
     },
+	
+	restartBrowserBetweenTests: false
 };

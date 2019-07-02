@@ -9,8 +9,13 @@ When(/^I type "(.*?)"$/, async (text) => {
 });
 
 When(/^I click on search button$/, async () => {
-    await browser.actions().sendKeys(protractor.Key.ENTER).perform();
+    await search.searchButton.click();
 });
+
+When(/^I hit enter in the search input$/, async () => {
+    await search.searchTextBox.sendKeys(protractor.Key.ENTER);
+});
+
 
 Then(/^I click on google logo$/, async () => {
     await search.logo.click();
